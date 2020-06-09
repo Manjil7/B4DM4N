@@ -1,0 +1,25 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+span {
+  background-color: green;
+}
+li {
+  cursor: pointer;
+  padding: 10px;
+  list-style: none;
+}
+.sub-list {
+  display: none;
+}
+.home:focus + .sub-list {
+  display: block;
+}

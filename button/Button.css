@@ -1,0 +1,169 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  font-family: "Metal Mania";
+}
+header {
+  margin-top: 0px;
+  height: 50px;
+}
+.links {
+  margin-top: 25px;
+}
+.link {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.link .li {
+  position: relative;
+  float: right;
+  position: relative;
+  padding: 15px;
+}
+.link .li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -1px;
+  left: 0;
+  height: 40%;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+.link .li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top: 30px;
+  left: -1px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.color {
+  z-index: -1;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-image: linear-gradient(to right, #eecda3, #ef629f);
+  transition: 0.45s;
+}
+.li:hover .color {
+  width: 100%;
+}
+.container {
+  position: absolute;
+  top: 40%;
+  width: 300px;
+  height: 300px;
+  left: 70%;
+  border-radius: 15px;
+  animation: anime 15s infinite;
+}
+/*  
+@keyframes anime {
+  0% {
+    background-image: url(food.jpg);
+    background-size: cover;
+  }
+  25% {
+    background-image: url(food2.jpg);
+    background-size: cover;
+  }
+  50% {
+    background-image: url(food3.jpg);
+    background-size: cover;
+  }
+  75% {
+    background-image: url(girl.jpg);
+    background-size: cover;
+  }
+  100% {
+    rotate: rotatey(180deg);
+    background-image: url(food4.jpg);
+    background-size: cover;
+  }
+}
+/*  */
+.presentation {
+  line-height: 25px;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+h1 {
+  position: relative;
+  top: -25px;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 100%;
+  height: 2px;
+  width: 100%;
+  background-color: green;
+}
+.rate {
+  position: relative;
+  margin-left: 50px;
+}
+p {
+  font-size: 20px;
+}
+/* mail */
+.holder {
+  overflow: hidden;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-image: url(food2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 20%;
+  top: 30%;
+  padding-top: 15px;
+  box-shadow: 5px 10px #f8f8f8;
+}
+.information {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: translateX(-100%);
+  background-size: cover;
+  transition: 0.45s ease;
+  pointer-events: none;
+}
+.infog {
+  left: 25px;
+  font-size: 30px;
+  font-weight: 10000;
+  color: white;
+  position: relative;
+  top: 50%;
+}
+.holder:hover .information {
+  transform: translateX(0%);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+footer {
+  position: absolute;
+  left: 40%;
+  top: 90%;
+}
